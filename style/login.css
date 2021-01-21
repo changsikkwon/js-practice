@@ -5,6 +5,11 @@
     flex-direction: column;
     position: relative;
     background-color: rgba(var(--b3f,250,250,250),1);
+    flex-grow: 1;
+    flex-shrink: 0;
+    order: 4;
+    margin: 0;
+    padding: 0;
 }
 
 .main-content{
@@ -16,13 +21,14 @@
     align-items: stretch;
     box-sizing: border-box;
     display: flex;
-    padding: 0;
     position: relative;
+    align-items: center;
+    flex-direction: row;
+    max-height: 100%;
 }
 
 .main-left{
     background-image: url(https://www.instagram.com/static/images/homepage/home-phones@2x.png/9364675fb26a.png);
-    align-self: center;
     background-size: 454px 618px;
     flex-basis: 454px;
     height: 618px;
@@ -40,7 +46,6 @@
 
 .main-right{
     flex-grow: 1;
-    justify-content: center;
     margin-top: 12px;
     max-width: 350px;
     align-items: stretch;
@@ -258,4 +263,71 @@
     font-weight: 400;
     text-align: center;
     color: rgb(0, 55, 107);
+}
+
+.main-right-signup{
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    color: rgba(var(--i1d,38,38,38),1);
+}
+
+.signup-box{
+    align-items: stretch;
+    box-sizing: border-box;
+    margin: -3px 0px -4px 0px;
+    position: relative;
+}
+
+.signup-text{
+    display: block;
+    margin: 15px 15px 15px 15px;
+    font-size: 14px;
+    font-stretch: 100%;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+}
+
+.signup-atag-text{
+    font-weight: 600;
+    color: rgb(0, 149, 246);
+}
+
+.download-text{
+    margin: 10px 20px 10px 20px;
+    font-size: 14px;
+    font-stretch: 100%;
+    font-weight: 400;
+    text-align: center;
+    line-height: 18px;
+}
+
+.platform-a{
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+    position: relative;
+}
+
+.apple-platform{
+    margin-right: 8px;
+}
+
+.apple-img{
+    height: 40px;
+}
+
+.google-img{
+    height: 40px;
 }
