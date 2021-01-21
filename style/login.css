@@ -1,0 +1,261 @@
+.main{
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(var(--b3f,250,250,250),1);
+}
+
+.main-content{
+    justify-content: center;
+    margin: 32px auto 0;
+    max-width: 935px;
+    padding-bottom: 32px;
+    width: 100%;
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    padding: 0;
+    position: relative;
+}
+
+.main-left{
+    background-image: url(https://www.instagram.com/static/images/homepage/home-phones@2x.png/9364675fb26a.png);
+    align-self: center;
+    background-size: 454px 618px;
+    flex-basis: 454px;
+    height: 618px;
+    margin-left: -35px;
+    margin-right: -15px;
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
+.main-right{
+    flex-grow: 1;
+    justify-content: center;
+    margin-top: 12px;
+    max-width: 350px;
+    align-items: stretch;
+    border: 0 solid #000;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.main-right-login-box{
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 1px;
+    margin: 0 0 10px;
+    padding: 10px 0;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    color: rgba(var(--i1d,38,38,38),1);
+}
+
+.logo-box{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    margin: 22px auto 12px;
+    background-size: 440px 411px;
+    background-position: 0 -129px;
+    background-image: url(https://www.instagram.com/static/bundles/es6/sprite_core_2x_bcd90c1d4868.png/bcd90c1d4868.png);
+    background-repeat: repeat;
+    height: 51px;
+    width: 175px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+.login-box{
+    margin-bottom: 10px;
+    margin-top: 24px;
+    max-width: 350px;
+    width: 100%;
+    border: 0 solid #000;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
+}
+
+.id{
+    margin: 0 40px 6px;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    border: 1px solid rgba(var(--ca6,219,219,219),1);
+    border-radius: 3px;
+    height: 36px;
+    width: 270px;
+}
+
+.input-id{
+    font-size: 12px;
+    background: rgba(var(--b3f,250,250,250),1);
+    border: 0;
+    flex: 1 0 auto;
+    padding: 9px 0 7px 8px;
+    text-overflow: ellipsis;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+.password{
+    margin: 0 40px 6px;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    border: 1px solid rgba(var(--ca6,219,219,219),1);
+    border-radius: 3px;
+    height: 36px;
+    width: 270px;
+}
+
+.input-password{
+    font-size: 12px;
+    background: rgba(var(--b3f,250,250,250),1);
+    border: 0;
+    flex: 1 0 auto;
+    padding: 9px 0 7px 8px;
+    text-overflow: ellipsis;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+.login-btn-box{
+    margin-bottom: 8px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 8px;
+    justify-content: center;
+    align-content: stretch;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 270px;
+    height: 30px;
+    border: 1px solid transparent;
+}
+
+.login-btn{
+    opacity: 1;
+    background-color: rgba(var(--d69,0,149,246),.3);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    position: relative;
+    text-align: center;
+    width: 270px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 18px;
+    text-rendering: auto;
+    font: 400 13.3333px Arial;
+    color: rgba(var(--eca,255,255,255),1);
+}
+
+.or-box{
+    margin: 10px 40px 18px;
+    position: relative;
+    align-items: stretch;
+    box-sizing: border-box;
+    flex-direction: row;
+    display: flex;
+}
+
+.or-left-line{
+    height: 1px;
+    max-width: 42%;
+    position: relative;
+    top: .45em;
+    background-color: rgba(var(--b38,219,219,219),1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.or-text{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 15px;
+    margin: 0 18px;
+    color: rgba(var(--f52,142,142,142),1);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.or-right-line{
+    height: 1px;
+    max-width: 42%;
+    position: relative;
+    top: .45em;
+    background-color: rgba(var(--b38,219,219,219),1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.facebook-box{
+    margin: 8px 40px 8px 40px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.facebook-btn{
+    color: rgba(var(--d69,0,149,246),1);
+    display: block;
+    position: relative;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.facebook-logo{
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    top: 3px;
+    background-image: url(https://www.instagram.com/static/bundles/es6/sprite_core_2x_bcd90c1d4868.png/bcd90c1d4868.png);
+    background-position: -347px -329px;
+    background-size: 440px 411px;
+    height: 16px;
+    width: 16px;
+}
+
+.facebook-text{
+    color: rgb(56, 81, 133);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.find-password{
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(0, 55, 107);
+}
