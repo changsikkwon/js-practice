@@ -27,11 +27,17 @@ setInterval(slide, 5000);
 const updateValue = (e) => {
     if (inputId.value){
         if (inputPassword.value){
-            if (inputPassword.value.length <= 8 && !isNaN(inputPassword.value)){
+            if (inputPassword.value.length >= 8 && !isNaN(inputPassword.value)){
                 alert('로그인 성공!')
                 location.replace('main.html')
+            } else{
+                alert('비밀번호를 8글자 이상 숫자로 입력하세요')
             }
+        } else{
+            alert('비밀번호를 입력하세요')
         }
+    } else{
+        alert('아이디를 입력하세요')
     }
 }
 
