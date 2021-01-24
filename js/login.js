@@ -23,7 +23,6 @@ function slide(){
 slide();
 setInterval(slide, 5000);
 
-
 const updateValue = (e) => {
     if (inputId.value){
         if (inputPassword.value){
