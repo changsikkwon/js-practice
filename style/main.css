@@ -1,0 +1,40 @@
+.section{
+    display: flex;
+    justify-content: center;
+}
+
+.nav{
+    max-width: 975px;
+    height: 54px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 975px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-inner-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-logo-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 360px;
+}
+
+.nav-search-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    width: 215px;
+}
+
+.nav-icon-box{
+    width: 360px;
+    padding-left: 24px;
+}
