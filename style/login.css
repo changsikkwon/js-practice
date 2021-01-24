@@ -45,6 +45,25 @@
     position: relative
 }
 
+.main-left-img-box{
+    margin-top: 99px;
+    margin-left: 151px;
+    position: relative;
+}
+
+.img{
+    height: 427px;
+    width: 240px;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    opacity:0;
+}
+
+.showing{
+    z-index: 1;
+    opacity: 1;
+}
+
 .main-right{
     flex-grow: 1;
     margin-top: 12px;
