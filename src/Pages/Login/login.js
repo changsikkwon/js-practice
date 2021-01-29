@@ -1,4 +1,63 @@
-.main{
+import React, { useState } from "react";
+import styled from "styled-components";
+
+const SignIn = () => {
+    const [account, setAccount] = useState("");
+    const [password, setPassword] = useState("");
+
+    const onChangeAccount = e => {
+        setAccount(e.target.value);
+    };
+
+    const onChangePassword = e => {
+        setPassword(e.target.value);
+    };
+
+    const clickLogin = () => {
+        if (account.length >3 && password.length >8) {
+            alert("로그인 성공!")
+        };
+    };
+
+    return (
+        <MainContainer>
+            <MainContent>
+                <MainLeft>
+                    <MainLeftImgBox>
+                        <MainLeftImg src="https://www.instagram.com/static/images/homepage/screenshot1-2x.jpg/9144d6673849.jpg" />
+                        <MainLeftImg src="https://www.instagram.com/static/images/homepage/screenshot2-2x.jpg/177140221987.jpg" />
+                        <MainLeftImg src="https://www.instagram.com/static/images/homepage/screenshot3-2x.jpg/ff2c097a681e.jpg" />
+                        <MainLeftImg src="https://www.instagram.com/static/images/homepage/screenshot4-2x.jpg/b27a108592d8.jpg" />
+                        <MainLeftImg src="https://www.instagram.com/static/images/homepage/screenshot5-2x.jpg/5e04169b9308.jpg" />
+                    </MainLeftImgBox>
+                </MainLeft>
+                <MainRight>
+                    <MainRightLoginBox>
+                        <LogoBox>
+                            <Logo />
+                        </LogoBox>
+                        <LoginBox>
+                            <AccountBox>
+                                <InputAccount value={account} onChange={onChangeAccount} />
+                            </AccountBox> 
+                            <PasswordBox>
+                                <InputPassword value={password} onChange={onChangePassword} />
+                            </PasswordBox>
+                        </LoginBox>
+                        <loginBtnBox>
+                            <LoginBtn onClick={() => clickLogin()}>로그인</LoginBtn>
+                        </loginBtnBox>
+                    </MainRightLoginBox>
+                </MainRight>
+            </MainContent>
+        </MainContainer>
+    );
+};
+
+export default SignIn;
+
+const MainContainer = styled.div`
+    width: 100%;
     align-items: stretch;
     box-sizing: border-box;
     display: flex;
@@ -11,24 +70,23 @@
     margin: 0;
     max-height: 75%;
     padding: 0;
-}
+`
 
-.main-content{
+const MainContent = styled.div`
     justify-content: center;
     margin: 32px auto 0;
     max-width: 935px;
     padding-bottom: 32px;
     width: 100%;
     align-items: stretch;
-    box-sizing: border-box;
     display: flex;
     position: relative;
     align-items: center;
     flex-direction: row;
     max-height: 100%;
-}
+`;
 
-.main-left{
+const MainLeft = styled.div`
     background-image: url(https://www.instagram.com/static/images/homepage/home-phones@2x.png/9364675fb26a.png);
     background-size: 454px 618px;
     flex-basis: 454px;
@@ -36,35 +94,34 @@
     margin-left: -35px;
     margin-right: -15px;
     align-items: stretch;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     margin: 0;
     padding: 0;
     position: relative
-}
+`
 
-.main-left-img-box{
+const MainLeftImgBox = styled.div`
     margin-top: 99px;
     margin-left: 151px;
     position: relative;
-}
+`
 
-.img{
+const MainLeftImg = styled.div`
     height: 427px;
     width: 240px;
     position: absolute;
     transition: all 1s ease-in-out;
-    opacity:0;
-}
+    opacity:1;
+`
 
-.showing{
+const Showing = styled.div`
     z-index: 1;
     opacity: 1;
-}
+`
 
-.main-right{
+const MainRight = styled.div`
     flex-grow: 1;
     margin-top: 12px;
     max-width: 350px;
@@ -77,9 +134,9 @@
     margin: 0;
     padding: 0;
     position: relative;
-}
+`
 
-.main-right-login-box{
+const MainRightLoginBox = styled.div`
     align-items: center;
     background-color: white;
     border: 1px solid rgba(var(--b6a,219,219,219),1);
@@ -90,14 +147,14 @@
     display: flex;
     position: relative;
     color: rgba(var(--i1d,38,38,38),1);
-}
+`
 
-.logo-box{
+const LogoBox = styled.div`
     display: flex;
     justify-content: center;
-}
+`
 
-.logo{
+const Logo = styled.h1`
     margin: 22px auto 12px;
     background-size: 440px 411px;
     background-position: 0 -129px;
@@ -107,9 +164,9 @@
     width: 175px;
     margin-block-start: 1em;
     margin-block-end: 1em;
-}
+`
 
-.login-box{
+const LoginBox = styled.div`
     margin-bottom: 10px;
     margin-top: 24px;
     max-width: 350px;
@@ -119,9 +176,9 @@
     flex-direction: column;
     margin: 0;
     position: relative;
-}
+`
 
-.id{
+const AccountBox = styled.div`
     margin: 0 40px 6px;
     box-sizing: border-box;
     display: flex;
@@ -130,9 +187,9 @@
     border-radius: 3px;
     height: 36px;
     width: 270px;
-}
+`
 
-.input-id{
+const InputAccount = styled.input`
     font-size: 12px;
     background: rgba(var(--b3f,250,250,250),1);
     border: 0;
@@ -140,9 +197,9 @@
     padding: 9px 0 7px 8px;
     text-overflow: ellipsis;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}
+`
 
-.password{
+const PasswordBox = styled.div`
     margin: 0 40px 6px;
     box-sizing: border-box;
     display: flex;
@@ -151,9 +208,9 @@
     border-radius: 3px;
     height: 36px;
     width: 270px;
-}
+`
 
-.input-password{
+const InputPassword = styled.input`
     font-size: 12px;
     background: rgba(var(--b3f,250,250,250),1);
     border: 0;
@@ -161,9 +218,9 @@
     padding: 9px 0 7px 8px;
     text-overflow: ellipsis;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-}
+`
 
-.login-btn-box{
+const LoginBtnBox = styled.div`
     margin-bottom: 8px;
     margin-left: 40px;
     margin-right: 40px;
@@ -176,10 +233,9 @@
     width: 270px;
     height: 30px;
     border: 1px solid transparent;
-}
+`
 
-.login-btn{
-    opacity: 1;
+const LoginBtn = styled.button`
     background-color: rgba(var(--d69,0,149,246),.3);
     border: 1px solid transparent;
     border-radius: 4px;
@@ -192,162 +248,4 @@
     text-rendering: auto;
     font: 400 13.3333px Arial;
     color: rgba(var(--eca,255,255,255),1);
-}
-
-.or-box{
-    margin: 10px 40px 18px;
-    position: relative;
-    align-items: stretch;
-    box-sizing: border-box;
-    flex-direction: row;
-    display: flex;
-}
-
-.or-left-line{
-    height: 1px;
-    max-width: 42%;
-    position: relative;
-    top: .45em;
-    background-color: rgba(var(--b38,219,219,219),1);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.or-text{
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 15px;
-    margin: 0 18px;
-    color: rgba(var(--f52,142,142,142),1);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.or-right-line{
-    height: 1px;
-    max-width: 42%;
-    position: relative;
-    top: .45em;
-    background-color: rgba(var(--b38,219,219,219),1);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
-.facebook-box{
-    margin: 8px 40px 8px 40px;
-    display: flex;
-    position: relative;
-    justify-content: center;
-}
-
-.facebook-btn{
-    color: rgba(var(--d69,0,149,246),1);
-    display: block;
-    position: relative;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-    background-color: rgba(0, 0, 0, 0);
-    border-color: rgba(0, 0, 0, 0);
-}
-
-.facebook-logo{
-    display: inline-block;
-    margin-right: 8px;
-    position: relative;
-    top: 3px;
-    background-image: url(https://www.instagram.com/static/bundles/es6/sprite_core_2x_bcd90c1d4868.png/bcd90c1d4868.png);
-    background-position: -347px -329px;
-    background-size: 440px 411px;
-    height: 16px;
-    width: 16px;
-}
-
-.facebook-text{
-    color: rgb(56, 81, 133);
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.find-password{
-    margin-top: 12px;
-    font-size: 12px;
-    font-weight: 400;
-    text-align: center;
-    color: rgb(0, 55, 107);
-}
-
-.main-right-signup{
-    align-items: center;
-    background-color: white;
-    border: 1px solid rgba(var(--b6a,219,219,219),1);
-    border-radius: 1px;
-    margin: 0 0 10px;
-    padding: 10px 0;
-    flex-direction: column;
-    display: flex;
-    position: relative;
-    color: rgba(var(--i1d,38,38,38),1);
-}
-
-.signup-box{
-    align-items: stretch;
-    box-sizing: border-box;
-    margin: -3px 0px -4px 0px;
-    position: relative;
-}
-
-.signup-text{
-    display: block;
-    margin: 15px 15px 15px 15px;
-    font-size: 14px;
-    font-stretch: 100%;
-    font-weight: 400;
-    line-height: 18px;
-    text-align: center;
-}
-
-.signup-atag-text{
-    font-weight: 600;
-    color: rgb(0, 149, 246);
-}
-
-.download-text{
-    margin: 10px 20px 10px 20px;
-    font-size: 14px;
-    font-stretch: 100%;
-    font-weight: 400;
-    text-align: center;
-    line-height: 18px;
-}
-
-.platform-a{
-    align-items: stretch;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10px 0px 10px 0px;
-    position: relative;
-}
-
-.apple-platform{
-    margin-right: 8px;
-}
-
-.apple-img{
-    height: 40px;
-}
-
-.google-img{
-    height: 40px;
-}
+`
