@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router';
-import styled from 'styled-components';
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
 import Nav from '../../Components/Nav/nav';
+import Post from './posting';
+
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
 
 const Main = () => {
-    return <Nav />;
+    return (
+        <Wrapper>
+            <Nav />
+            <Post />
+        </Wrapper>
+    );
 };
 
 export default Main;

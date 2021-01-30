@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import reset from "styled-reset";
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -11,7 +11,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   body {
-    font-family: ‘Roboto’, sans-serif;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    inline-height: 18px;
   }
   button {
     border: none;
