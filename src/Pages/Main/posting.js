@@ -256,7 +256,7 @@ const Post = () => {
                     <span>이 좋아합니다</span>
                 </LikePeopleBox>
                 <PostTextBox>
-                    <PostAccount>cs094</PostAccount>
+                    <PostAccount>itzy.all.in.us</PostAccount>
                     <Comment>Pink balloons🎈🎀</Comment>
                 </PostTextBox>
                 <CommentBox>
